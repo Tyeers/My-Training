@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aqila Pasya Hermawan</title>
+    <style>
+      .container {
+        font-family: arial;
+        font-size: 24px;
+        margin: 25px;
+      }
+      .content {
+        width: 600px;
+        background-color:dimgrey;
+        /* Center horizontally*/
+        margin: 0 auto;
+        color:white;
+      }
+      img {
+        width: 200px;
+        display: block;
+        margin: auto;
+      }
+
+      table {
+        background-color: dimgray;
+        display: block;
+      }
+      button {
+        font-size: 18pt;
+        font-family:sans-serif;
+        padding: 5px 10px;
+        background-color: gray;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        margin: 0 auto;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content" id="content">
+        <div id="form"><br>
+          <h1 style="text-align: center">BIODATA</h1><br>
+          <img src="C:\Users\ACER\OneDrive\Gambar\Random\WhatsApp Image 2022-08-11 at 14.26.47.jpeg" alt="APH Photo" width="105" height="250"/><br>
+          
+          <table>
+            <tr>
+              <td>Nama</td>
+              <td>:</td>
+              <td><input type="text" name="nama" id="nama" /></td>
+            </tr>
+            <tr>
+              <td>Tanggal Lahir</td>
+              <td>:</td>
+              <td><input type="date" name="tgl_lahir" id="tgl_lahir" /></td>
+            </tr>
+            <tr>
+              <td>Jenis Kelamin</td>
+              <td>:</td>
+              <td>
+                <input
+                  type="radio"
+                  name="jenis_kelamin"
+                  id="jenis_kelamin"
+                  value="Perempuan"
+                />
+                Perempuan
+                <input
+                  type="radio"
+                  name="jenis_kelamin"
+                  id="jenis_kelamin"
+                  value="Laki-laki"
+                />
+                Laki-laki
+              </td>
+            </tr>
+            <tr>
+            <td>Agama</td>
+            <td>:</td>
+            <td><select name="Religion">
+              <option value="Islam">Islam</option>
+              <option value="Kristen">Kristen</option>
+              <option value="Buddha">Buddha</option>
+              <option value="Katolik">Katolik</option>
+              <option value="Hindu">Hindu</option>
+              <option value="Kong Hu Chu">Kong Hu Chu</option>
+            </select>
+          </td>
+          </tr>
+            <tr>
+              <td>Alamat</td>
+              <td>:</td>
+              <td><textarea name="alamat" id="alamat"></textarea></td>
+            </tr>
+          </table>
+          <button onclick="kirim()">Kirim</button>
+        </div>
+        <div style="display: none" id="result">
+          <h5>Selamat data anda sudah terkirim, tapi beneran kami jual nanti. Jangan menyesal</h5>
+          <a href="profile.html" style="color: white;"><h6>Saya Tidak Menyesal</h6></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function kirim() {
+      document.getElementById("result").style["display"] = "block";
+      document.getElementById("form").style["display"] = "none";
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+    }
+  </script>
+</html>
